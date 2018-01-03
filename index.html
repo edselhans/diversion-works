@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Test</h1>
+  <div id="output">
+
+  </div>
+  <script type="text/javascript">
+    function downloadJSAtOnload() {
+    var element = document.createElement("script");
+    element.src = "script.js";
+    document.body.appendChild(element);
+    }
+    if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
+  </script>
+</body>
+</html>
